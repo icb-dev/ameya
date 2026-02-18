@@ -1,0 +1,6 @@
+.env
+node_modules
+dist-ameya
+.env.local
+*.zip
+test.js

@@ -1,0 +1,66 @@
+@reference "tailwindcss";
+
+/* FOOTER WRAPPER */
+.ar-footer {
+  @apply w-full text-white;
+  background:radial-gradient(ellipse at center, #000000e6 0%, #000000 70%, #000000 100%);
+}
+
+/* TOP BAR */
+.ar-footer-top {
+  @apply max-w-[1450px] mx-auto flex justify-between items-center  py-8 border-b border-white/10;
+}
+
+.ar-footer-menu {
+  @apply flex gap-8 uppercase text-sm tracking-widest;
+}
+
+.ar-footer-menu a {
+  @apply text-white  hover:text-[#40a6ff] transition-colors text-[10px];
+}
+
+.ar-footer-social {
+  @apply flex gap-10 text-lg;
+}
+
+.ar-footer-social a {
+  @apply text-white/80 hover:text-white transition-colors;
+}
+
+/* MAIN CONTENT */
+.ar-footer-main {
+  @apply text-center py-20 px-6;
+}
+
+.ar-footer-logo img {
+  @apply mx-auto h-14 mb-8;
+}
+
+.ar-footer-phone {
+  @apply text-4xl md:text-3xl lg:text-4xl font-light tracking-[0px] mb-8; 
+}
+
+.ar-footer-office {
+  @apply uppercase text-xs tracking-[2.6px] text-white/70 mb-4;
+}
+
+.ar-footer-address {
+  @apply text-base leading-relaxed text-white/70 not-italic tracking-[1.2px];
+}
+
+/* BOTTOM BAR */
+.ar-footer-bottom {
+  @apply max-w-[1450px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-8 py-6 border-t border-white/10 text-xs text-white/60;
+}
+
+.ar-footer-credit span {
+  @apply text-white;
+}
+
+.ar-footer-links {
+  @apply flex gap-6;
+}
+
+.ar-footer-links a {
+  @apply hover:text-white transition-colors;
+}

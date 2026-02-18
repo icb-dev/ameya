@@ -1,0 +1,189 @@
+@reference "tailwindcss"; 
+
+/* --- Header Base Structure --- */
+.ar-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0; /* Ensures no padding at the header level */
+}
+
+/* Removed all horizontal padding and max-width constraints */
+.ar-header-containerr {
+    margin-inline: auto;
+    max-width: 1450px;
+    padding: 22px; 
+}
+
+.ar-header-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+/* --- Navigation Links Alignment & Font Fix --- */
+/* Target specifically to ensure font-size: 13px works */
+.ar-header-menu .ar-header-link,
+.ar-header-cta .ar-header-link {
+    font-family: 'CadillacGothic-Regular', sans-serif !important;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 13px !important; 
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.ar-header-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-left: 0px; /* Small buffer so text doesn't touch the screen bezel */  
+}
+.ar-header-cta {
+    padding-right: 0px; /* Small safe-zone for the right side */
+}
+
+/* --- Dropdown Container --- */
+.ar-header-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.ar-header-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    background: white;
+    padding: 0.8rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 100;
+    margin-top: 10px;
+    /* This creates the 'expand down' visual start point */
+    transform-origin: top; 
+}
+
+/* The Bridge: Prevents menu closing when moving cursor to dropdown */
+.ar-header-dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+
+.ar-header-dropdown-menu a {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    color: #333 !important;
+    text-decoration: none;
+    font-family: 'CadillacGothic-Regular', sans-serif;
+    font-size: 13px;
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+}
+
+.ar-header-dropdown-menu a:hover {
+    background: #f8f9fa;
+    color: #28659b !important;
+    padding-left: 2rem;
+}
+
+/* --- Interactive Contact Button --- */
+.ar-header-btn-interactive {
+    font-family: 'CadillacGothic-WideRegular', sans-serif;
+    position: relative;
+    padding: 10px 38px;
+    background: #28659b;
+    color: #ffffff !important;
+    border-radius: 50px;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    border: 1px solid #00000050;
+    margin-right: 0px; /* Small buffer from right edge */
+}
+
+.ar-header-btn-interactive .btn-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #28659b;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+}
+
+.ar-header-btn-interactive:hover {
+    color: #ffffff !important;
+    border-color: #28659b;
+    transform: translateY(-2px);
+}
+
+.ar-header-btn-interactive:hover .btn-fill {
+    width: 100%;
+}
+
+/* --- Sticky States --- */
+.ar-header-transparent {
+    background: transparent;
+    color: #ffffff;
+}
+
+.ar-header-sticky {
+    background: rgb(255 255 255 / 75%)!important;
+    backdrop-filter: blur(30px) brightness(2.5)!important;
+    height: 75px;
+    color: #000000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05)!important;
+}
+
+
+
+@media (max-width: 1024px) {
+  /* styles for 1024px and smaller */
+  /* Target specifically to ensure font-size: 13px works */
+.ar-header-menu .ar-header-link,
+.ar-header-cta .ar-header-link { 
+    letter-spacing: 0.4px;
+    font-size: 12px !important;  
+    gap: 2px; 
+}
+
+.ar-header-btn-interactive { 
+    padding: 10px 22px; 
+    font-size: 12px;
+    letter-spacing: 0.6px; 
+}
+.ar-header-menu { 
+    gap: 0rem;  
+    width: max-content;
+}
+.ar-header-cta { 
+    width: max-content;
+} 
+}

@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@import "aos/dist/aos.css";
+
+/* Gotham Thin */
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Gotham Light */
+@font-face {
+  font-family: "Gotham";
+  src: url("./assets/fonts/Gotham-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Franklin Gothic Medium Condensed */
+@font-face {
+  font-family: "FranklinGothic-MediumCond";
+  src: url("./assets/fonts/FranklinGothic-MediumCond.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Franklin Gothic Demi */
+@font-face {
+  font-family: "FranklinGothic-Demi";
+  src: url("./assets/fonts/FranklinGothic-Demi.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Franklin Gothic Book */
+@font-face {
+  font-family: "FranklinGothic-Book";
+  src: url("./assets/fonts/FranklinGothic-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+ 
+
+/* navbar begin */
+.am-logo{
+  width: 140px;
+}
+.ar-nav-li{
+    border: none;
+    color: #000;
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin: 0 30px;
+    padding: 0px;
+    text-decoration: none;
+    margin: 0 20px;
+    font-family: "FranklinGothic-Book", sans-serif;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+
+.ar-nav-li-0{
+  margin-right: 0px;
+}
+
+.ar-nav-li a.active {
+    color: #9d2a2a;
+}
+
+.ar-nav-li a.active:before {
+    background: #9d2a2a;
+    width: 100%;
+}
+.ar-toggle{
+  color: #00000080;
+}
+/* navbar end */
+
+
+/* home banner begin */
+.ar-banr-dv {
+  padding-top: 90px;
+  background: linear-gradient(180deg, #dbdad6 42%, transparent 0);
+}
+/* home banner end */

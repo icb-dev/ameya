@@ -1,0 +1,601 @@
+@reference "tailwindcss"; 
+
+@font-face {
+  font-family: 'SangBleuSunrise-Regular';
+  src: url('../assets/fonts/SangBleuSunrise-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'quarto';
+  src: url('../assets/fonts/quarto.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CadillacGothic-NarrowRegular';
+  src: url('../assets/fonts/CadillacGothic-NarrowRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CadillacGothic-Regular';
+  src: url('../assets/fonts/CadillacGothic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CadillacGothic-WideRegular';
+  src: url('../assets/fonts/CadillacGothic-WideRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay-Roman';
+  src: url('../assets/fonts/NeueHaasDisplay-Roman.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'NeueHaasDisplay-Thin';
+  src: url('../assets/fonts/NeueHaasDisplay-Thin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ameyasans-WideMedium';
+  src: url('../assets/fonts/Ameyasans-WideMedium.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TrajanPro-Regular';
+  src: url('../assets/fonts/TrajanPro-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('../assets/fonts/PlayfairDisplay-Regular.ttf') format('trueType');
+  font-style: normal;
+  font-display: swap;
+}
+
+.PlayfairDisplay {
+  font-family: 'PlayfairDisplay', sans-serif; 
+  font-weight: 400;
+}
+
+.TrajanPro-Regular {
+  font-family: 'TrajanPro-Regular', sans-serif; 
+  font-weight: 400;
+}
+
+.Ameyasans-WideMedium {
+  font-family: 'Ameyasans-WideMedium', sans-serif; 
+  font-weight: 400;
+}
+
+
+.NeueHaasDisplay-Roman {
+  font-family: 'NeueHaasDisplay-Roman', sans-serif; 
+  font-weight: 400;
+}
+
+
+.NeueHaasDisplay-Thin {
+  font-family: 'NeueHaasDisplay-Thin', sans-serif; 
+  font-weight: 400;
+}
+
+.sangbleu {
+  font-family: 'SangBleuSunrise-Regular', sans-serif; 
+  font-weight: 400;
+}
+
+.quarto {
+  font-family: 'quarto', sans-serif; 
+  font-weight: 400;
+}
+ 
+
+
+.CadillacGothic-NarrowRegular {
+  font-family: 'CadillacGothic-NarrowRegular', sans-serif; 
+  font-weight: 400;
+}
+
+.CadillacGothic-Regular {
+  font-family: 'CadillacGothic-Regular', sans-serif; 
+  font-weight: 400;
+}
+
+.CadillacGothic-WideRegular {
+  font-family: 'CadillacGothic-WideRegular', sans-serif; 
+  font-weight: 400;
+}
+
+
+
+/* Header base */
+.ar-header {
+  @apply fixed top-0 left-0 w-full z-50;
+}
+
+.ar-header-transparent {
+  @apply bg-transparent;
+}
+
+.ar-header-sticky {
+  @apply bg-white shadow-md;
+}
+
+.ar-header-container {
+  @apply max-w-[1450px] mx-auto px-6 py-4;
+}
+
+/* TRUE 3-column layout */
+.ar-header-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+/* Left menu */
+.ar-header-menu {
+  @apply flex gap-8 items-center justify-start;
+}
+
+/* Center logo */
+.ar-header-logo {
+  @apply flex justify-center;
+}
+
+/* Right CTA */
+.ar-header-cta {
+  @apply flex justify-end items-center gap-6;
+}
+/* Menu */
+.ar-header-menu {
+  @apply hidden lg:flex gap-8 items-center;
+}
+
+.ar-header-link {
+  @apply text-sm font-medium uppercase tracking-wide transition-colors duration-300;
+}
+
+.ar-header-transparent .ar-header-link {
+  @apply text-white;
+}
+
+.ar-header-sticky .ar-header-link {
+  @apply text-black;
+}
+
+/* Dropdown */
+.ar-header-dropdown {
+  @apply relative cursor-pointer;
+}
+
+.ar-header-dropdown-menu {
+  @apply absolute top-full left-0 bg-white text-black mt-4 min-w-[180px] shadow-lg flex flex-col;
+}
+
+.ar-header-dropdown-menu a {
+  @apply px-5 py-3 text-sm hover:bg-gray-100;
+}
+
+/* Logo */
+.ar-header-logo img {
+  @apply h-12 mx-auto;
+}
+
+/* CTA */
+.ar-header-cta {
+  @apply hidden lg:flex items-center gap-6;
+}
+
+.ar-header-btn {
+  @apply px-6 py-2 border border-current text-sm uppercase transition-all duration-300;
+}
+
+.ar-header-transparent .ar-header-btn {
+  @apply text-white border-white hover:bg-white hover:text-black;
+}
+
+.ar-header-sticky .ar-header-btn {
+  @apply text-black border-black hover:bg-black hover:text-white;
+}
+
+/* Mobile */
+.ar-header-hamburger {
+  @apply lg:hidden text-2xl;
+}
+
+.ar-header-transparent .ar-header-hamburger {
+  @apply text-white;
+}
+
+.ar-header-sticky .ar-header-hamburger {
+  @apply text-black;
+}
+
+/* Mobile Sidebar */
+.ar-header-mobile {
+  @apply fixed inset-0 bg-black text-white flex flex-col p-8 z-50 gap-6;
+}
+
+.ar-header-mobile a {
+  @apply text-lg uppercase tracking-wide;
+}
+
+.ar-header-mobile-btn {
+  @apply mt-4 inline-block border border-white px-6 py-3 text-center;
+}
+
+.ar-header-mobile-close {
+  @apply absolute top-6 right-6 text-2xl;
+}
+
+
+.home-page {
+  background-color: #0b0b0b;
+}
+
+.home-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8%;
+}
+
+.home-hero h1 {
+  font-family: 'SangBleuSunrise-Regular', sans-serif;
+  font-size: 64px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.home-hero p {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #c9a24d;
+}
+  
+/* =========================
+   HERO WRAPPER
+========================= */
+.ar-hero {
+  @apply relative w-full h-screen overflow-hidden;
+}
+
+/* =========================
+   SWIPER
+========================= */
+.ar-hero-swiper {
+  @apply w-full h-full;
+}
+
+/* =========================
+   SLIDE
+========================= */
+.ar-hero-slide {
+  @apply relative w-full h-screen;
+}
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+.ar-hero-bg {
+  @apply absolute inset-0 bg-cover bg-center will-change-transform;
+  transform: translateY(0);  
+}
+
+/* =========================
+   GRADIENT OVERLAY (CUSTOMIZE)
+========================= */
+/* .ar-hero-overlay {
+  @apply absolute inset-0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75)0%, 
+    rgba(0, 0, 0, 0)65%,
+    rgba(0, 0, 0, 1) 100%
+  );
+} */
+
+.ar-hero-overlay {
+  @apply absolute inset-0;
+  background: linear-gradient(
+    to bottom,
+     rgba(0, 0, 0, 0.4)0%, 
+    rgba(0, 0, 0, 0)30%,
+    rgba(0, 0, 0, 0)80%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+/* =========================
+   CONTENT
+========================= */
+.ar-hero-content {
+  @apply relative z-10 h-full flex items-center px-6 md:px-16 lg:px-24;
+}
+
+.ar-hero-content h1 {
+  @apply text-white text-4xl md:text-6xl lg:text-7xl max-w-4xl leading-tight;
+  font-family: var(--ar-font-heading);
+}
+
+/* =========================
+   NAVIGATION (BOTTOM CENTER)
+========================= */
+.ar-hero-nav {
+  @apply absolute bottom-14 left-1/2 -translate-x-1/2 flex gap-6 z-20;
+}
+
+.ar-hero-prev,
+.ar-hero-next {
+  @apply text-white text-xl border border-white px-4 py-2 transition-all duration-300;
+}
+
+.ar-hero-prev:hover,
+.ar-hero-next:hover {
+  @apply bg-white text-black;
+}
+
+/* =========================
+   PAGINATION (DASH STYLE)
+========================= */
+.ar-hero-pagination {
+  @apply absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-20;
+}
+
+.ar-hero-pagination .swiper-pagination-bullet {
+  width: 32px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  border-radius: 0;
+}
+
+.ar-hero-pagination .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
+
+/* Hero Banner */
+
+
+/* about section */    
+.ar-about-gsap {
+  @apply min-h-screen w-full flex items-center justify-center bg-white px-6;
+}
+
+.ar-about-inner {
+  max-width: var(--ar-about-width, 1100px); /* 👈 line control */
+  @apply text-center mx-auto;
+}
+
+.ar-about-subtitle {
+  @apply uppercase tracking-widest text-xs mb-6;
+  color: #000;
+}
+
+.ar-about-heading {
+  @apply text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-10;
+  font-family: var(--ar-font-heading);
+}
+
+.ar-line {
+  display: block;
+
+  background: linear-gradient(
+    to right,
+    #000 0%,
+    #000 calc(var(--fill, 0%) - 20%),
+    rgba(0, 0, 0, 0.25) var(--fill, 0%),
+    #d0d0d0 calc(var(--fill, 0%) + 30%)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ar-about-desc {
+  @apply text-base md:text-lg max-w-3xl mx-auto;
+  color: #666;
+}
+
+/* about section */
+
+/* Container for the arrows */
+.ar-hero-nav {
+    position: absolute;
+    bottom: 50px;
+    /* right: 50px; */
+    z-index: 10;
+    display: flex;
+    gap: 15px;
+}
+
+/* Individual Button Styling */
+.ar-hero-prev, .ar-hero-next {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect for Buttons */
+.ar-hero-prev:hover, .ar-hero-next:hover {
+    background: #28659b; /* Your brand color */
+    border-color: #28659b;
+    transform: scale(1.1);
+}
+
+/* Ensure SVG scales nicely */
+.ar-hero-prev svg, .ar-hero-next svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Slight nudge on hover */
+.ar-hero-prev:hover svg { transform: translateX(-3px); }
+.ar-hero-next:hover svg { transform: translateX(3px); }
+
+/* Pagination styling */
+.ar-hero-pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+
+.swiper-pagination-bullet {
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff;
+    width: 60px;
+}
+
+/* home about button */
+.ar-about-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 40px;
+  background: #28659b;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'CadillacGothic-Regular', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+}
+
+.ar-about-btn .btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+.ar-about-btn .btn-icon {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+/* The Animated Background */
+.ar-about-btn .btn-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: #28659b; /* Or use your brand blue #28659b */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: 0;
+}
+
+/* Hover States */
+.ar-about-btn:hover {
+  color: #fff;
+  border-color: #1a4369;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ar-about-btn:hover .btn-background {
+  width: 300%; /* Expands to fill the button */
+  height: 500px;
+  background:#1a4369;
+}
+
+.ar-about-btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* Active/Click State */
+.ar-about-btn:active {
+  transform: translateY(-1px);
+}
+/* home about button */
+
+
+/* project detail  */
+
+.ar-prodetail-hero-overlay {
+  @apply absolute inset-0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75)0%, 
+    rgba(0, 0, 0, 0.2)40%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+ 
+/* project detail */
+
+
+/* responsive */
+@media (max-width: 1024px) { 
+  .ar-about-btn { 
+  padding: 12px 30px; 
+  font-size: 12px; 
+}
+}
+
+@media (max-width: 475px) { 
+  .ar-about-btn { 
+  padding: 10px 20px; 
+  font-size: 12px;  
+  letter-spacing: 0.1em;
+}
+}
+/* responsive */
